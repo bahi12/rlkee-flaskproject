@@ -3,7 +3,7 @@
 Returns:
     [Text]: [description]
 """
-import googletrans
+from deep_translator import MyMemoryTranslator
 
 
 def english_to_french(text):
@@ -16,7 +16,7 @@ def english_to_french(text):
         [type]: [description]
     """
     # write the code here
-    translator = googletrans.Translator(src='en', dst='fr')
+    translator = MyMemoryTranslator(source='en', target='fr')
     translation = translator.translate(text)
     return translation
 
@@ -31,7 +31,7 @@ def french_to_english(text):
         [type]: [description]
     """
     # write the code here
-    translator = googletrans.Translator(src='fr', dst='en')
+    translator = MyMemoryTranslator(source='fr', target='en')
     translation = translator.translate(text)
     return translation
 
