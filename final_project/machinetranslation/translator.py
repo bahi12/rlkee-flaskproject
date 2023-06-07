@@ -36,6 +36,8 @@ def french_to_english(text):
     return translation
 
 
+""""
+
 FR = 'Bonjour'
 EN = 'Hello'
 
@@ -44,3 +46,4 @@ result_en = french_to_english(FR)
 
 print(result_fr)  # Output: 'Bonjour !'
 print(result_en)  # Output: 'Hello!'
+"""
