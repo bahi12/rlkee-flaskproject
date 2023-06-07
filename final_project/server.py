@@ -6,7 +6,7 @@ import machinetranslation as MT
 app = Flask("Web Translator")
 
 
-@app.route("/englishToFrench")
+@app.route("/e2f")
 def englishToSpanish():
     textToTranslate = request.args.get('textToTranslate')
     translation = MT.translator.english_to_french(
@@ -14,7 +14,7 @@ def englishToSpanish():
     return translation
 
 
-@app.route("/frenchToEnglish")
+@app.route("/f2e")
 def spanishToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     translation = MT.translator.french_to_english(
@@ -24,7 +24,8 @@ def spanishToEnglish():
 
 @app.route("/")
 def renderIndexPage():
-    # Write the code to render template
+    return render_template('index.html')
 
-    if __name__ == "__main__":
-        app.run(host="localhost", port=8080)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
