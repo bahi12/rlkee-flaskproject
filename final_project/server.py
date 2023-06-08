@@ -6,16 +6,16 @@ import machinetranslation as MT
 app = Flask("Web Translator")
 
 
-@app.route("/e2f")
-def englishToSpanish():
+@app.route("/englishToFrench", methods=["POST"])
+def englishTofrench():
     textToTranslate = request.args.get('textToTranslate')
     translation = MT.translator.english_to_french(
         textToTranslate)
     return translation
 
 
-@app.route("/f2e")
-def spanishToEnglish():
+@app.route("/frenchToEnglish", methods=["POST"])
+def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     translation = MT.translator.french_to_english(
         textToTranslate)
